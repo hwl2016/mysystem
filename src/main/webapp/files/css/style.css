@@ -1,0 +1,184 @@
+html, body {
+	height:100%;
+	overflow:hidden;
+	font-family: '微软雅黑';
+}
+ul  {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+textarea {
+	resize: none;
+}
+a, a:hover, a:active, a:visited {
+	text-decoration: none;
+}
+/* utils begin*/
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix{
+	clear:both;
+	_zoom:1;
+}
+.float-l{
+  float: left;
+}
+.float-r{
+  float: right;
+}
+.textoverflow {
+	overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.overflow {
+    overflow: hidden;
+}
+
+.f-blue {
+	color:#05adec;
+}
+.f-red {
+  color:#ED1961;
+}
+.f-red2 {
+  color:#F47E8C;
+}
+.f-orange{
+  color: #fdc800;
+}
+.f-orange2{
+	color:#FF6600;
+}
+.f-blue{
+	color:#059fdb;
+}
+/* utils end */
+
+header {
+	height: 60px;
+	background: #05ADEC;
+	color: #fff;
+	padding:0 30px;
+	line-height: 60px;
+}
+header .logo {
+	height: 100%;
+	font-size: 20px;
+}
+header .info {
+	height: 100%;
+}
+header .info a {
+	color: #fff;
+}
+
+/* 侧边栏导航 begin */
+aside {
+	width: 200px;
+	height: calc(100% - 60px);
+	float:left;
+	background: #f5f5f5;
+	border-right: 6px solid #ddd;
+}
+aside ul li {
+	height: 40px;
+	border-bottom: 1px solid #ccc;
+}
+aside ul li a {
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	color: #333;
+	padding-left: 10px;
+}
+aside ul li a:hover,
+aside ul li a.active {
+	background: #616770;
+	color: #fff;
+}
+/* 侧边栏导航 end */
+
+#main {
+	width: calc(100% - 200px);
+	height: calc(100% - 60px);
+	float:left;
+	padding: 10px 20px;
+	overflow: auto;
+}
+.wrapper {
+	min-width: 780px;
+}
+
+.page_top {
+	height: 50px;
+	line-height: 50px;
+	font-size: 16px;
+	border-bottom: 2px solid #ddd;
+	margin-bottom: 10px;
+}
+.page_name {
+	font-weight: bold;
+	margin-right: 10px;
+}
+.page_btn {
+	background: #05adec;
+	border-radius: 4px;
+	color: #fff;
+	padding: 4px 8px;
+	font-size: 14px;
+	cursor: pointer;
+}
+.page_form_btn {
+	margin-top: 30px;
+	/* text-align: center; */
+}
+.submit {
+	margin-right: 30px;
+}
+.btn-part {
+	text-align: center;
+}
+.error {
+	color: #a10;
+}
+.red-border {
+	border-color: #a10;
+}
+.green-border{
+	border-color: #3c763d;
+}
+.form-group {
+	position: relative;
+}
+.tips-area p {
+	margin: 8px 0 0 0;
+}
+.success {
+	color: #3c763d;
+}
+.label4radio input[type="radio"]{
+	position: relative;
+	top: 1px;
+	margin-right: 3px;
+}
+.mr-10 {
+	margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+

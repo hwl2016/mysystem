@@ -1,0 +1,35 @@
+<div>
+	<div class="page_top">
+		<span class="page_name">用户列表</span>
+		<a class="page_btn page_btn_add" href="#/user/add">+ 添加用户</a>
+	</div>
+	<table class="table table-hover table-bordered">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>用户名</th>
+				<th>密码</th>
+				<th>真实姓名</th>
+				<th>性别</th>
+				<th>出生年月</th>
+				<th>属相</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in userBean.list">
+				<td ng-bind="item.id"></td>
+				<td ng-bind="item.username"></td>
+				<td ng-bind="item.password"></td>
+				<td ng-bind="item.realname"></td>
+				<td ng-bind="item.gender"></td>
+				<td ng-bind="item.birthday"></td>
+				<td ng-bind="item.czs"></td>
+				<td>
+					<a href="#/user/edit?id={{item.id}}">修改</a>
+					<a href="javascript:;" ng-click="deleteRecord(item.username, item.id)">删除</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

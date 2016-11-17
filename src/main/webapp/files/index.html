@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width,user-scalable=no,initial-scale=1.0" name="viewport">
+	<title>huwl</title>
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="js/component/layer/layer.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header>
+		<div class="float-l logo">LOGO</div>
+		<div class="float-r info">欢迎您，<a href="javascript:;">huwl</a></div>
+	</header>
+	<aside>
+		<ul>
+			<li><a ui-sref="user">用户</a></li>
+			<li><a ui-sref="blog">博客</a></li>
+			<!-- <li><a href="#/work">工作</a></li>
+			<li><a href="#/diary">日记</a></li>
+			<li><a href="#/family">家人</a></li>
+			<li><a href="#/psd">密码</a></li> -->
+		</ul>
+	</aside>
+	<div id="main">
+		<div class="wrapper">
+			<div ui-view></div>
+		</div>
+	</div>
+
+<script data-baseUrl="./" id="scriptTag" src="libs/require.js" data-main="main.js?v=1.9"></script>
+</body>
+</html>

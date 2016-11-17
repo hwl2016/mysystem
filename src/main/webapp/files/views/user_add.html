@@ -1,0 +1,115 @@
+<div class="user user_add">
+	<div class="page_top"><span class="page_name">添加</span></div>
+	<form name="userForm" class="form-horizontal" ng-submit="submitData()">
+		<div class="form-group">
+			<label for="username" class="col-sm-offset-2 col-sm-2 control-label">用户名</label>
+			<div class="col-sm-4">
+				<input type="text" value="" class="form-control" name="username" id="username" 
+							 ng-class="{'red-border': userForm.username.$touched && userForm.username.$invalid,
+							 					  'green-border': userForm.username.$touched && userForm.username.$valid}"
+							 required ng-minlength="4" ng-maxlength="16" ng-model="formData.username"/>
+			</div>
+			<div class="col-sm-4 tips-area">
+				<p class="error" ng-if="userForm.username.$touched && userForm.username.$error.required">用户名不能为空</p>
+				<p class="error" ng-if="userForm.username.$error.minlength || userForm.username.$error.maxlength">用户名长度应该为4-16位之间</p>
+				<p class="glyphicon glyphicon-ok success" 
+					  ng-if="userForm.username.$valid"></p>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="password" class="col-sm-offset-2 col-sm-2 control-label">密码</label>
+			<div class="col-sm-4">
+				<input type="password" value="" class="form-control" name="password" id="password" 
+							 ng-class="{'red-border': userForm.password.$touched && userForm.password.$invalid,
+							 					  'green-border': userForm.password.$touched && userForm.password.$valid}"
+							 required ng-minlength="6" ng-maxlength="32" ng-model="formData.password"/>
+			</div>
+			<div class="col-sm-4 tips-area">
+				<p class="error" ng-if="userForm.password.$touched && userForm.password.$error.required">密码不能为空</p>
+				<p class="error" ng-if="userForm.password.$error.minlength || userForm.password.$error.maxlength">密码长度应该为6-32位之间</p>
+				<p class="glyphicon glyphicon-ok success" 
+					  ng-if="userForm.password.$valid"></p>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="psdAgin" class="col-sm-offset-2 col-sm-2 control-label">确认密码</label>
+			<div class="col-sm-4">
+				<input type="password" value="" class="form-control" name="psdAgin" id="psdAgin" 
+							 ng-class="{'red-border': userForm.psdAgin.$touched && userForm.psdAgin.$invalid,
+							 					  'green-border': userForm.psdAgin.$touched && userForm.psdAgin.$valid}"
+							 required  ng-model="formData.psdAgin" compare="formData.password"/>
+			</div>
+			<div class="col-sm-4 tips-area">
+			  	<p class="error" ng-if="userForm.psdAgin.$touched && userForm.psdAgin.$error.compare">两次密码输入的不一致</p>
+				<p class="glyphicon glyphicon-ok success" 
+					  ng-if="userForm.psdAgin.$valid"></p>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="realname" class="col-sm-offset-2 col-sm-2 control-label">真实姓名</label>
+			<div class="col-sm-4">
+				<input type="text" value="" class="form-control" name="realname" id="realname" 
+							 ng-class="{'red-border': userForm.realname.$touched && userForm.realname.$invalid,
+							 					  'green-border': userForm.realname.$touched && userForm.realname.$valid}"
+							 required ng-model="formData.realname"/>
+			</div>
+			<div class="col-sm-4 tips-area">
+				<p class="error" ng-if="userForm.realname.$touched && userForm.realname.$error.required">真实姓名不能为空</p>
+				<p class="glyphicon glyphicon-ok success" 
+					  ng-if="userForm.realname.$valid"></p>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-offset-2 col-sm-2 control-label">性别</label>
+			<div class="col-sm-4">
+				<div class="radio">
+					<label class="label4radio mr-10">
+						<input type="radio" name="gender" id="male" value="男" ng-checked="true" ng-model="formData.gender"><span>男</span>
+					</label>
+					<label class="label4radio">
+						<input type="radio" name="gender" id="female" value="女" ng-model="formData.gender"><span>女</span>
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="birthday" class="col-sm-offset-2 col-sm-2 control-label">生日</label>
+			<div class="col-sm-4">
+				<input type="date" value="" class="form-control" name="birthday" id="birthday" 
+							 required ng-model="formData.birthday"/>
+			</div>
+			<div class="col-sm-4 tips-area">
+				<p class="error" ng-if="userForm.birthday.$touched && userForm.birthday.$error.required">请选择生日</p>
+				<p class="glyphicon glyphicon-ok success" 
+					  ng-if="userForm.birthday.$valid"></p>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="czs" class="col-sm-offset-2 col-sm-2 control-label">生肖属相</label>
+			<div class="col-sm-4">
+				<select name="czs" id="czs" class="form-control" ng-model="formData.czs">
+					<option value="鼠" ng-selected="true">鼠</option>
+					<option value="牛">牛</option>
+					<option value="虎">虎</option>
+					<option value="兔">兔</option>
+					<option value="龙">龙</option>
+					<option value="蛇">蛇</option>
+					<option value="马">马</option>
+					<option value="羊">羊</option>
+					<option value="猴">猴</option>
+					<option value="鸡">鸡</option>
+					<option value="狗">狗</option>
+					<option value="猪">猪</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group btn-part">
+			<input type="submit" value="提交" class="btn btn-primary submit" ng-disabled="userForm.$invalid" />
+			<a href="javascript:history.go(-1);"  class="btn btn-default">取消</a>
+		</div>
+	</form>
+</div>
+
+
+
+
