@@ -3,44 +3,72 @@
 	height: 300px;
 	position: fixed;
 	z-index: 5;
-	border: 1px solid #000;
+	border: 1px solid #357ebd;
 	box-shadow: 0 0 12px rgba(0,0,0,.5);
 	background-color: #fff;
 }
 .window_header {
-	background-color: #333;
+	height: 38px;
+	line-height: 38px;
+	background-color: #428bca;
 	color: #fff;
 	text-align: center;
-	padding: 5px;
-	font-size: 20px;
+	font-size: 16px;
 }
 .window_body {
 	padding: 10px;
 }
+.window_footer {
+	position: absolute;
+	left: 0;
+	bottom: 10px;
+	width: 100%;
+	text-align: center;
+}
 .winodw_closeBtn {
+	display: block;
+	height: 38px;
+	line-height: 38px;
 	position: absolute;
 	top: 0;
 	right: 0;
 	color: #fff;
 	cursor: pointer;
-	padding: 5px 10px;
+	padding: 0px 10px;
 	font-size: 20px;
-	background-color: blue;
+	background-color: #428bca;
 }
 .window_alertBtn,
 .window_confirmBtn,
+.window_promptBtn,
 .window_cancelBtn {
-	width: 100px;
+	width: 60px;
 	height: 30px;
 	line-height: 30px;
-	position: absolute;
-	bottom: 10px;
-	left: 50%;
-	margin-left: -50px;
 	cursor: pointer;
+	border: none;
+	border-radius: 4px;
+	background: #428bca;
+	color: #fff;
+	outline: none;
 }
-.window_confirmBtn {
-	margin-left: -117px;
+.window_cancelBtn {
+	background: #fff;
+	color: #333;
+	border: 1px solid #ccc;
+}
+.window_promptInputWrapper {
+	margin: 5px 0;
+	text-align: center;
+}
+.window_promptInput {
+	width: 80%;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	height: 30px;
+	line-height: 30px;
+	outline: none;
+	text-indent: 5px;
 }
 .window_cancelBtn {
 	margin-left: 16px;
@@ -63,7 +91,7 @@
 	
 }
 .window_skin_a .window_header {
-	background: blue;
+	
 }
 .window_skin_a .winodw_closeBtn {
 	
