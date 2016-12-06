@@ -9,6 +9,6 @@ public class TestDate {
 		String str = "1988-01-01 00:00:00";
 		SimpleDateFormat sfd = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 		Date date = sfd.parse(str);
-		System.out.println(date);
+		System.out.println(date.getTime());
 	}
 }
